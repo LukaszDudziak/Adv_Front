@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            --divNumber: 4;
+            --divHeight: calc(100vh/var(--divNumber));
+            --oddBgc: rgb(0, 0, 255);
+            --evenBgc: rgb(255, 0, 0);
+            --width1: 10px;
+            --width2: 200px
+        }
+
+        div {
+            /* height: var(--divHeight); */
+            height: calc(var(--width1) + var(--width2));
+            background-color: var(--oddBgc);
+        }
+
+        div:nth-child(even) {
+            background-color: var(--evenBgc);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

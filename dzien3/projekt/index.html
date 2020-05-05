@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7c02160cdc.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        nav.desktop,
+        header {
+            height: 360px;
+        }
+
+        nav.desktop {
+            float: left;
+            width: 300px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav.desktop a {
+            display: block;
+            line-height: 72px;
+            font-size: 22px;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: arial;
+            padding: 0 5px 0 20px;
+        }
+
+        nav.desktop i {
+            width: 50px;
+            border-right: solid black;
+            margin-right: 30px;
+            transition: .3s;
+        }
+
+        nav.desktop a:hover i {
+            margin-right: 50px;
+        }
+
+        nav.desktop a:hover {
+            color: orange;
+        }
+
+        header {
+            float: left;
+            width: calc(100% - 300px);
+            background-image: url('piano.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        section h1 {
+            font-size: 40px;
+            font-family: arial;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        nav.desktop {
+            display: block;
+        }
+
+        nav.mobile {
+            display: none;
+        }
+
+        @media(max-width: 1024px) {
+            nav.desktop {
+                display: none;
+            }
+
+            nav.mobile {
+                position: fixed;
+                display: block;
+                width: 72px;
+                height: 100%;
+                background-color: #000;
+                color: #fff;
+            }
+
+            nav.mobile a {
+                display: block;
+                line-height: 12vh;
+                color: #fff;
+                font-size: 30px;
+                text-align: center;
+                transition: .3s;
+            }
+
+            nav.mobile a:hover {
+                color: orange;
+            }
+
+            header {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap clearfix">
+        <nav class="desktop">
+            <ul>
+                <li><a href="#"><i class="far fa-play-circle"></i>start</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i>ofeta</a></li>
+                <li><a href="#"><i class="fas fa-rss"></i>blok</a></li>
+                <li><a href="#"><i class="far fa-calendar-alt"></i>terminarz</a></li>
+                <li><a href="#"><i class="far fa-envelope"></i>kontakt</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <ul>
+                <li><a href="#"><i class="far fa-play-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#"><i class="fas fa-rss"></i></a></li>
+                <li><a href="#"><i class="far fa-calendar-alt"></i></a></li>
+                <li><a href="#"><i class="far fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+        <header></header>
+    </div>
+    <section>
+        <h1>witaj w naszym świecie</h1>
+    </section>
+</body>
+
+</html>
