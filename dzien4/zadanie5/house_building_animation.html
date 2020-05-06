@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        span {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            background-color: rgb(112, 20, 20);
+            font-family: arial;
+            color: #fff;
+            padding: 20px;
+        }
+
+        div:nth-of-type(1) {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 0px;
+            height: 0px;
+            background-color: rgb(133, 25, 25);
+            transition: 1s;
+        }
+
+        div:nth-of-type(2) {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 0px;
+            height: 0px;
+            background-color: #000;
+            transition: 1.3s;
+        }
+
+        div:nth-of-type(3) {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 0px;
+            height: 0px;
+            background-color: rgb(48, 44, 44);
+            transition: 1.5s;
+        }
+
+        div:nth-of-type(4) {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 0px;
+            height: 0px;
+            background-color: rgb(53, 19, 4);
+            transition: 1.8s;
+        }
+
+        div:nth-of-type(5) {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 0px;
+            height: 0px;
+            background-color: rgb(223, 208, 4);
+            transition: 2s;
+        }
+
+        div:nth-of-type(6) {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 0px;
+            height: 0px;
+            background-color: rgb(223, 208, 4);
+            transition: 2s;
+        }
+
+        /* hovery */
+        span:hover~div:nth-of-type(1) {
+            width: calc(1.41421 * 30vh);
+            height: 30vh;
+            left: 60%;
+            bottom: 45%;
+            transform: translate(-50%, 50%);
+            z-index: 1;
+        }
+
+        span:hover~div:nth-of-type(2) {
+            width: 30vh;
+            height: 30vh;
+            left: 60%;
+            bottom: 45%;
+            transform: translate(-50%, 0%) rotate(45deg);
+            z-index: 0;
+        }
+
+        span:hover~div:nth-of-type(3) {
+            width: 10vh;
+            height: 30vh;
+            left: 60%;
+            bottom: 45%;
+            /* transform: translate(-50%, 0%); */
+            z-index: -1;
+        }
+
+        span:hover~div:nth-of-type(4) {
+            width: 10vh;
+            height: 15vh;
+            left: 60%;
+            bottom: 45%;
+            transform: translate(-50%, 100%);
+            z-index: 2;
+        }
+
+        span:hover~div:nth-of-type(5) {
+            width: 10vh;
+            height: 10vh;
+            left: 60%;
+            bottom: 45%;
+            transform: translate(-175%, 0%);
+            z-index: 2;
+        }
+
+        span:hover~div:nth-of-type(6) {
+            width: 10vh;
+            height: 10vh;
+            left: 60%;
+            bottom: 45%;
+            transform: translate(75%, 0%);
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
