@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            position: relative;
+            margin: 100px;
+            padding: 10px 25px;
+            font-size: 40px;
+            border-style: none;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        /* do wersji z pseudoklasą */
+        button::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 80%;
+            height: 6px;
+            background-color: #000;
+            transition: 1.5s cubic-bezier(0.01, 1.47, 0.09, -0.99);
+        }
+
+        button:hover::after {
+            left: 10%;
+        }
+
+        /* do wersji ze spanem w buttonie */
+        /* span {
+            position: absolute;
+            height: 3px;
+            width: 80%;
+            background-color: #000;
+            bottom: 0;
+            left: -100%;
+            transition: .3s;
+        }
+
+        button:hover span {
+            left: 10%;
+        } */
+    </style>
+</head>
+
+<body>
+    <button>Przycisk</button>
+</body>
+
+</html>
