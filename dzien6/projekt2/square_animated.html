@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            animation: move 3s 5s 100 linear;
+        }
+
+        @keyframes move {
+            0% {}
+
+            10% {
+                background-color: #0f0;
+            }
+
+            30% {
+                margin-left: calc(100% - 200px);
+            }
+
+            50% {
+                margin-left: calc(100% - 200px);
+                background-color: #f00;
+
+            }
+
+            80% {
+                margin-left: 0;
+
+            }
+
+            90% {
+                background-color: #0f0;
+            }
+
+            100% {}
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
