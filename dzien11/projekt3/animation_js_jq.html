@@ -54,8 +54,15 @@
     <button class="js">Dawaj JS!</button>
     <button class="jq">Dawaj JQ!</button>
     <br>
+    <script src="../jquery-3.5.1.min.js"></script>
+
+
 
     <script>
+        $('.jq').on('click', function () {
+            $('body').append('<div class="box">')
+        })
+
         const buttonJS = document.querySelector('.js');
 
         function createDiv() {
