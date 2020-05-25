@@ -24,7 +24,7 @@
 
         .sekcja3 {
             background-color: rgb(167, 46, 106);
-            height: 1190px;
+            height: 1290px;
         }
 
         .sekcja4 {
@@ -35,7 +35,7 @@
         .info {
             position: fixed;
             left: 0;
-            bottom: 0;
+            top: 0;
             height: 70px;
             width: 100%;
             box-shadow: 0 0 3px 3px grey;
@@ -56,36 +56,34 @@
     <section class="sekcja4"></section>
     <div class="info">WITAJ NA STRONIE</div>
 
-
     <script>
-        const txt = document.querySelector('div.info');
-
         function changeText() {
-            // console.log("ok")
-            const wielkoscSkrola = window.scrollY;
-            // console.log(wielkoscSkrola);
+            console.log('działa');
+            const wielkoscScrolla = window.scrollY;
+            // console.log(wielkoscScrolla);
 
             const wysokoscSekcji1 = document.querySelector('.sekcja1').clientHeight;
             const wysokoscSekcji2 = document.querySelector('.sekcja2').clientHeight;
             const wysokoscSekcji3 = document.querySelector('.sekcja3').clientHeight;
             const wysokoscSekcji4 = document.querySelector('.sekcja4').clientHeight;
-            // console.log(wysokoscSekcji3);
 
-            const odlegloscOdPoczatkuSekcji1 = document.querySelector('.sekcja1').offsetTop
-            const odlegloscOdPoczatkuSekcji2 = document.querySelector('.sekcja2').offsetTop
-            const odlegloscOdPoczatkuSekcji3 = document.querySelector('.sekcja3').offsetTop
-            const odlegloscOdPoczatkuSekcji4 = document.querySelector('.sekcja4').offsetTop
 
-            if (wielkoscSkrola < wysokoscSekcji1) {
-                txt.textContent = "sekcja 1"
-            } else if (wielkoscSkrola < wysokoscSekcji2 + odlegloscOdPoczatkuSekcji2) {
-                txt.textContent = "sekcja 2"
-            } else if (wielkoscSkrola < wysokoscSekcji3 + odlegloscOdPoczatkuSekcji3) {
-                txt.textContent = "sekcja 3"
+            const odlegloscOdPoczatkuSekcji1 = document.querySelector('.sekcja1').offsetTop;
+            const odlegloscOdPoczatkuSekcji2 = document.querySelector('.sekcja2').offsetTop;
+            const odlegloscOdPoczatkuSekcji3 = document.querySelector('.sekcja3').offsetTop;
+            const odlegloscOdPoczatkuSekcji4 = document.querySelector('.sekcja4').offsetTop;
+
+            if (wielkoscScrolla < wysokoscSekcji1) {
+                document.querySelector('div.info').textContent = 'sekcja 1';
+            } else if (wielkoscScrolla < wysokoscSekcji2 + odlegloscOdPoczatkuSekcji2) {
+                document.querySelector('div.info').textContent = 'sekcja 2';
+            } else if (wielkoscScrolla < wysokoscSekcji3 + odlegloscOdPoczatkuSekcji3) {
+                document.querySelector('div.info').textContent = 'sekcja 3';
             } else {
-                txt.textContent = "sekcja 4"
+                document.querySelector('div.info').textContent = 'sekcja 4';
             }
         }
+
         window.addEventListener('scroll', changeText)
     </script>
 </body>
