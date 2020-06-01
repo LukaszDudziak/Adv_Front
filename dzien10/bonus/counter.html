@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            line-height: 100vh;
+            font-size: 60px;
+            text-align: center;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        button {
+            position: fixed;
+            width: 100px;
+            line-height: 100px;
+            top: 40px;
+            left: 40px;
+            text-transform: uppercase;
+        }
+
+        .decrement {
+            left: 160px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="increment">Dodaj</button>
+    <button class="decrement">odejmij</button>
+    liczba kliknięć <span class="counter">0</span>
+
+    <script>
+        //potrzebne zmienne
+        let counter = 0;
+        //pobranie elementów
+        const spanCounter = document.querySelector('span.counter');
+        const buttonInc = document.querySelector('.increment');
+        const buttonDec = document.querySelector('.decrement');
+        // const clickElement = document.querySelector('body');
+        // document.body
+
+        //nasłuch na zdarzenie i akcja w funkcji
+        // document.body.addEventListener('click', function () {
+        //     counter++;
+        //     spanCounter.textContent = counter;
+        // })
+
+        buttonInc.addEventListener('click', function () {
+            counter++;
+            spanCounter.textContent = counter;
+        })
+        buttonDec.addEventListener('click', function () {
+            counter--;
+            spanCounter.textContent = counter;
+        })
+    </script>
+</body>
+
+</html>

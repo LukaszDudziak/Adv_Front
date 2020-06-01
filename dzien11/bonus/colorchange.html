@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        div {
+            flex-grow: 1;
+            height: 50px;
+            cursor: pointer;
+            margin: 20px;
+            border: 2px solid black;
+
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="orange"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+
+    <script>
+        //pobranie danych
+        // 1 i 2
+        // const oDiv = document.querySelector('.orange');
+        // const gDiv = document.querySelector('.green');
+        // const bDiv = document.querySelector('.blue');
+        // const yDiv = document.querySelector('.yellow');
+        // const rDiv = document.querySelector('.red');
+
+        // 3
+        const divs = document.querySelectorAll('div');
+
+
+        //funkcja 2 i 3
+        function changeColor() {
+            document.body.className = this.className
+        }
+        //wywołanie
+        // 3
+        divs.forEach(function (div) {
+            div.addEventListener('click', changeColor)
+        });
+        // 2
+        // oDiv.addEventListener('click', changeColor);
+        // gDiv.addEventListener('click', changeColor);
+        // bDiv.addEventListener('click', changeColor);
+        // yDiv.addEventListener('click', changeColor);
+        // rDiv.addEventListener('click', changeColor);
+        // 1
+        // oDiv.addEventListener('click', function () {
+        //     document.body.className = this.className;
+        // })
+    </script>
+</body>
+
+</html>
