@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .burger {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 60px;
+            height: 45px;
+            transition: .3s;
+        }
+
+        .burger.active {
+            transform: rotate(90deg);
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: #000;
+            left: 0;
+            transition: top .2s .2s, bottom .2s .2s, transform .2s .4s, opacity .2s .4s;
+        }
+
+        span:nth-child(1) {
+            top: 0;
+        }
+
+        span:nth-child(2) {
+            top: calc(50% - 5px);
+        }
+
+        span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .burger.active span:nth-child(1) {
+            top: calc(50% - 5px);
+            transform: rotate(45deg);
+        }
+
+        .burger.active span:nth-child(2) {
+            top: calc(50% - 5px);
+            opacity: 0;
+
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: calc(50% - 5px);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script>
+        const ico = document.querySelector('.burger')
+        ico.addEventListener('click', function () {
+            ico.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
